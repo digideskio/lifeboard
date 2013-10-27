@@ -133,7 +133,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 				<?php echo $this->Html->image("welcome_creator_akiho.png"); ?>
 				<?php echo $this->Html->image("welcome_creator_hajime.png"); ?>
 				<?php echo $this->Html->image("welcome_creator_takeshi.png"); ?>
-				<?php echo $this->Html->image("welcome_creator_komatsu.png"); ?>
 			</div>
 		</div>
 	</div>
