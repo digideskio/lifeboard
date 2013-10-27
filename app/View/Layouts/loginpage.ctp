@@ -52,7 +52,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			<?php echo $content_for_layout; ?>
 		</div>
 		<footer>
-			&copy; 大江戸ハッカソンCグループ All Right reserved.
+			&copy; A++ All Right reserved.
 		</footer>
 		<div id="welcome_contents">
 		<div class="welcome_content">
@@ -137,7 +137,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		</div>
 	</div>
 
-    <footer>&copy; 大江戸ハッカソンCグループ All Right reserved.</footer>
+    <footer>&copy; A++ All Right reserved.</footer>
 	</div>
 	<?php //echo $this->element('sql_dump'); ?>
 
