@@ -23,7 +23,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <html>
 <head>
 	<?php echo $this->Html->charset(); ?>
-	<title>LifeBoard</title>
+	<title>LifeBoard(test)</title>
 	<?php
 		echo $this->Html->meta('icon');
 		echo $this->fetch('meta');
