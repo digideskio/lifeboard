@@ -1,0 +1,461 @@
+@charset "UTF-8";
+
+* {
+	margin:0;
+	padding:0;
+}
+
+/*----- ▽グローバル -----*/
+header, footer {display: block;}
+ul, ol, dl, li {list-style-type: none;}
+p {display:inline;}
+tr, td {vertical-align:top;}
+.clear{clear:both;}
+small {font-size:11px;}
+img {vertical-align:bottom;}
+.center {text-align:center;}
+#container {background-color:#F1FFF8;}
+body {
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+/*----- △グローバル -----*/
+
+/*----- ▽ヘッダー -----*/
+header {
+	background-color:#009E9F;
+	width:100%;
+	height:45px;
+	position: fixed;
+	top:0px;
+	left:0px;
+	z-index:20000;
+}
+
+/*---------------▽9/4 変更---------------*/
+
+#header_inner {
+	position: relative;
+	width:1150px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#header_logo {
+	margin-top:5px;
+	margin-left:25px;
+	float:left;
+}
+/*---------------△9/4 変更---------------*/
+
+#follower_info {
+	position:absolute;
+	top:7px;
+	left:50%;
+}
+
+#follower_info:hover {
+	background-color:#1B4F51;
+}
+
+#follower_info img{
+	padding:5px;
+	padding-left:7px;
+}
+
+#follower_name {
+	color:white;
+	padding:5px;
+	padding-right:7px;
+	position:relative;
+	top:-4px;
+	font-size:14px;
+}
+
+#follower_info a{
+	text-decoration:none;
+}
+
+/*---------------9/4 ▽変更---------------*/
+#user_info {
+	margin-top:11px;
+	margin-right:20px;
+	float: right;
+	cursor: pointer;
+}
+img#user_icon {
+	position: relative;
+	right:0px;
+}
+ul#user_list {
+	position: absolute;
+	top:35px;
+	right:15px;
+	display: none;
+}
+
+ul#user_list a {
+	color:white;
+	text-decoration:none;
+}
+
+ul#user_list li {
+	width:130px;
+	height:20px;
+	padding:8px;
+	text-align: center;
+	color:white;
+	background:#009E9F;
+	box-shadow: 0 0 2px 0 #1B4F51;
+	font-size:14px;
+}
+
+li#user_list1 {
+	margin-top:10px;
+}
+li#user_list2 {
+	margin-top:-30px;
+	margin-left:-2px;
+	-moz-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+	-o-transform: rotate(5deg);
+	-ms-transform: rotate(5deg);
+}
+li#user_list3 {
+	margin-top:-30px;
+	margin-left:-7px;
+	-moz-transform: rotate(10deg);
+	-webkit-transform: rotate(10deg);
+	-o-transform: rotate(10deg);
+	-ms-transform: rotate(10deg);
+}
+
+/*---------------9/4 △変更---------------*/
+
+/*---------------9/4 ▽変更---------------*/
+#header_friends {
+	margin-top:9px;
+	margin-right:5px;
+	float: right;
+	width:30px;
+	height:30px;
+}
+
+#header_friends_box {
+	display:none;
+	position: absolute;
+	top:40px;
+	right:103px;
+	background: #fff;
+	height: 200px;
+	width: 200px;
+	margin-bottom: 20px;
+	border: 1px solid #1B4F51;
+	opacity:0.95;
+	z-index:80000;
+	/* 角丸 */
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+}
+/*---------------9/4 △変更---------------*/
+
+#header_friends_box:after {
+	content: '';
+	position: absolute;
+	border-bottom: 10px solid #fff;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	top: -9px;
+	left: 90px;
+}
+#header_friends_box:before {
+	content: '';
+	position: absolute;
+	border-bottom: 10px solid #1B4F51;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	top: -11px;
+	left: 90px;
+}
+
+.header_overlay {
+	display:none;
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	opacity:0;
+	z-index:70000;
+}
+
+/*---------------9/4 ▽変更---------------*/
+.header_searchbox {
+	margin-top:12px;
+	margin-right: 10px;
+	float: right;
+	z-index:10001;
+}
+/*---------------9/4 △変更---------------*/
+
+.header_searchbox input {
+	width:120px;
+	height:20px;
+}
+
+/*----- △ヘッダー -----*/
+
+/*---------------9/4 ▽変更---------------*/
+/*----- ▽フッター -----*/
+footer {
+	width:100%;
+	height:25px;
+	padding-top:7px;
+	background-color:#1B4F51;
+	color:white;
+	text-align:center;
+	font-size:12px;
+}
+/*----- △フッター -----*/
+
+/*----- ▽ Welcomeページ -----*/
+
+header#welcome {
+	background-color:#009E9F;
+	width:100%;
+	height:45px;
+	position: absolute; /* welcomeページだけabsolute */
+	top:0px;
+	left:0px;
+	z-index:20000;
+}
+
+#mainvisual {
+	position: relative;
+	width:1150px;
+	height:600px;
+	margin-left:auto;
+	margin-right:auto;
+	background:url(../img/mainvisual.png)no-repeat;
+}
+
+#mainvisual_back {
+	width:100%;
+	height:600px;
+	background:url(../img/mainvisual_back.png);
+}
+#login {
+	width:auto;
+	height:auto;
+	position:absolute;
+	top:430px;
+	left:780px;
+}
+
+#login button{
+	display: block;
+	width: 359px;
+	height: 75px;
+	border: none;
+	background:url(../img/btn_login.png)no-repeat;
+	cursor: pointer;
+}
+
+#login button:hover{
+	background:url(../img/btn_login_on.png)no-repeat;
+}
+
+#welcome_contents {
+	width:916px;
+	height:auto;
+	margin-left: auto;
+	margin-right:auto;
+	background: white;
+}
+
+.welcome_des1_right img {
+	margin-bottom: 10px;
+	box-shadow: 0 0 3px black;
+}
+.welcome_des2_right img {
+	margin-top:5px;
+	box-shadow: 0 0 3px black;
+}
+
+#welcome_contents h2 {
+	width:809px;
+	height:79px;
+	padding-top:15px;
+	padding-left:15px;
+	margin-left:40px;
+	margin-bottom: 30px;
+	font-weight: normal;
+	color:#1A4E51;
+	font-size: 26px;
+	background: url(../img/h2.png)no-repeat;
+}
+
+#welcome_contents h2 big {
+	font-size: 35px;
+	margin-right: 30px;
+}
+
+#welcome_contents h2.eng {
+	font-size:30px;
+}
+
+#welcome_contents h2.eng big {
+	font-size:40px;
+	margin-left: 2px;
+	margin-right:35px;
+}
+
+.welcome_content {
+	padding-top:40px;
+	overflow: hidden;
+	font-size:14px;
+	color:#1A4E51;
+}
+
+.welcome_des1_left {
+	float: left;
+	width: 375px;
+	height: auto;
+	margin-left: 50px;
+}
+
+.welcome_des1_right {
+	float: left;
+	margin-left: 20px;
+}
+
+.welcome_des2_wrapper {
+	height:300px;
+	margin-top:0px;
+	overflow: hidden;
+}
+
+.welcome_des2_left {
+	float: left;
+	width: 459px;
+	height: auto;
+	margin-left: 50px;
+	position: relative;
+}
+
+.welcome_des2_right {
+	float: left;
+	margin-left: 10px;
+}
+
+.welcome_des2_left h3 {
+	font-size:21px;
+	font-weight: normal;
+	margin-bottom:40px;
+}
+
+.welcome_arrow {
+	position:absolute;
+	top:195px;
+	left:80px;
+	width: 38px;
+	height:72px;
+	background: url(../img/welcome_arrow.png)no-repeat;
+}
+
+#creators {
+	position: relative;
+	top:-80px;
+}
+
+.welcome_creators_wrapper {
+	width:836px;
+	margin-left: auto;
+	margin-right: auto;
+	white-space: nowrap;
+}
+
+/*----- △ Welcomeページ -----*/
+/*---------------9/4 △変更---------------*/
+
+/*-----------------------------▼吹き出し----------------------------------*/
+.triangle-border {
+	position:relative;
+	width:432px;
+	min-height:60px; /*これつけないと吹き出しじゃなくなる*/
+	border:1px solid #009E9F;
+	background:#fff;
+	/* 角丸 */
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+}
+
+.triangle-border:before {
+	content:"";
+	position:absolute;
+	bottom:-20px; /* value = - border-top-width - border-bottom-width */
+	left:40px; /* controls horizontal position */
+    border-width:20px 20px 0;
+	border-style:solid;
+    border-color:#009E9F transparent;
+    display:block;
+    width:0;
+}
+
+/* creates the smaller  triangle */
+.triangle-border:after {
+	content:"";
+	position:absolute;
+	bottom:-13px; /* value = - border-top-width - border-bottom-width */
+	left:47px; /* value = (:before left) + (:before border-left) - (:after border-left) */
+	border-width:13px 13px 0;
+	border-style:solid;
+	border-color:#fff transparent;
+    /* reduce the damage in FF3.0 */
+    display:block;
+    width:0;
+}
+
+/* creates the larger triangle */
+.triangle-border.right:before {
+	top:19px; /* controls vertical position */
+	bottom:auto;
+    left:auto;
+	right:-12px; /* value = - border-left-width - border-right-width */
+	border-width:7px 0 7px 12px;
+	border-color:transparent #009E9F;
+}
+
+/* creates the smaller  triangle */
+.triangle-border.right:after {
+	top:16px; /* value = (:before top) + (:before border-top) - (:after border-top) */
+	bottom:auto;
+    left:auto;
+	right:-11px; /* value = - border-left-width - border-right-width */
+	border-width:10px 0 10px 21px;
+	border-color:transparent #fff;
+}
+/*-----------------------------▲吹き出し----------------------------------*/
+
+/*----- ▽コンテンツ -----*/
+#contents {
+	margin-top:45px;
+	width:1000px;
+	height:100%;
+	margin-left:auto;
+	margin-right:auto;
+	z-index:50;
+}
+
+/*----- △コンテンツ -----*/
+
+/*----- ▽モーダルウィンドウ -----*/
+#overlay {position: fixed; z-index:100; margin-top:45px; top: 0px;left: 0px;height: 100%;width: 100%;background: #000; opacity:0.7;cursor: pointer;}
+#modal {background: none repeat scroll 0 0 #FFFFFF;box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);padding: 30px;width: 780px;height:70%;overflow: scroll;}
+.modal_close {position: absolute;top: 12px;right: 12px;display: block; width: 34px;height: 35px;z-index: 3;cursor: pointer;}
+.top_logo {position:absolute;top:120px;left:170px;}
+.top_searchbox {position:absolute;top:300px;left:130px;background:url(../img/searchbox.png) no-repeat;width:589px;height:79px;}
+.top_searchbox input {margin-top:17px;margin-left:70px;padding-left:5px;width:495px;height:40px;font-size:30px;}
+/*----- △モーダルウィンドウ -----*/
+

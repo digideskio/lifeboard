@@ -1,0 +1,823 @@
+@charset "UTF-8";
+
+* {
+	margin:0;
+	padding:0;
+}
+
+/*----- ▽グローバル -----*/
+header, footer {display: block;}
+ul, ol, dl, li {list-style-type: none;}
+tr, td {vertical-align:top;}
+p {display: inline;}
+.clear{clear:both;}
+small {font-size:11px;}
+img {vertical-align:bottom;}
+.center {text-align:center;}
+#container {
+}
+
+html,body{
+	height: 100%;
+}
+
+body {
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+
+	background-color:#F1FFF8;
+
+}
+
+div#container{
+	min-height: 100%;
+	height: 100%;
+	background-color: #ffffff;
+	background-color:#F1FFF8;
+}
+
+body > div#container{
+	height: auto;
+}
+/*----- △グローバル -----*/
+
+
+/*----- ▽ヘッダー -----*/
+header {
+	background-color:#009E9F;
+	width:100%;
+	height:45px;
+	position: fixed;
+	top:0px;
+	left:0px;
+	z-index:20000;
+}
+
+/*---------------▽9/4 変更---------------*/
+
+#header_inner {
+	position: relative;
+	width:1150px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#header_logo {
+	margin-top:5px;
+	margin-left:25px;
+	float:left;
+}
+/*---------------△9/4 変更---------------*/
+
+#follower_info {
+	position:absolute;
+	top:2px;
+	left:50%;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+#follower_info:hover {
+	background-color:#1B4F51;
+}
+
+#follower_info img{
+	/*
+	padding:5px;
+	*/
+	padding-left:7px;
+	width: 32px;
+	height: 32px;
+}
+
+#follower_name {
+	color:white;
+	padding:5px;
+	padding-right:7px;
+	position:relative;
+	top:-4px;
+	font-size:14px;
+}
+
+#follower_info a{
+	text-decoration:none;
+}
+
+/*---------------9/4 ▽変更---------------*/
+#user_info {
+	margin-top:6px;
+	margin-right:20px;
+	float: right;
+	cursor: pointer;
+}
+
+#user_info a{
+	display: block;
+	padding: 8px;
+}
+/*
+img#user_icon {
+	position: relative;
+	right:0px;
+}*/
+
+#user_icon{
+	width: 32px;
+	height: 32px;
+}
+ul#user_list {
+	position: absolute;
+	top:35px;
+	right:15px;
+	display: none;
+}
+
+ul#user_list a {
+	color:white;
+	text-decoration:none;
+}
+
+ul#user_list li {
+	width:146px;
+	/*height:36px;*/
+	padding: 0px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-align: center;
+	color:white;
+	background:#009E9F;
+	box-shadow: 0 0 2px 0 #1B4F51;
+	font-size:14px;
+	/*line-height: 30px;*/
+}
+
+li#user_list1 {
+	margin-top:10px;
+}
+li#user_list2 {
+	margin-top:-30px;
+	margin-left:-2px;
+	-moz-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+	-o-transform: rotate(5deg);
+	-ms-transform: rotate(5deg);
+}
+li#user_list3 {
+	margin-top:-30px;
+	margin-left:-7px;
+	-moz-transform: rotate(10deg);
+	-webkit-transform: rotate(10deg);
+	-o-transform: rotate(10deg);
+	-ms-transform: rotate(10deg);
+}
+
+/*---------------9/4 △変更---------------*/
+
+/*---------------9/4 ▽変更---------------*/
+
+#post{
+	float: right;
+	margin-right: 5px;
+	margin-top: 12px;
+}
+
+#header_friends {
+	margin-top:9px;
+	margin-right:5px;
+	float: right;
+	width:30px;
+	height:30px;
+}
+
+#header_friends_box {
+	display:none;
+	position: absolute;
+	top:40px;
+	right:100px;
+	background: #fff;
+	min-height: 200px;
+	max-height: 400px;
+	padding-top: 10px;
+	width: 585px;
+	padding-left: 15px;
+	margin-bottom: 20px;
+	border: 1px solid #1B4F51;
+	opacity:0.95;
+	z-index:80000;
+	/* 角丸 */
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	overflow: hidden;
+	overflow: scroll;
+}
+
+#header_friends_box a{
+	display: block;
+	width: 178px;
+	height: 40px;
+	float: left;
+	margin-right: 15px;
+	margin-bottom: 10px;
+	border: solid 1px #e2e2e2;
+	border-radius: 3px;
+}
+/*---------------9/4 △変更---------------*/
+
+#header_friends_box:after {
+	content: '';
+	position: absolute;
+	border-bottom: 10px solid #fff;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	top: -9px;
+	left: 90px;
+}
+#header_friends_box:before {
+	content: '';
+	position: absolute;
+	border-bottom: 10px solid #1B4F51;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	top: -11px;
+	left: 90px;
+}
+
+.friend_box{
+	width: 178px;
+	height: 40px;
+	/*float: left;*/
+}
+
+.friend_box img{
+	float: left;
+	width: 32px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	margin-right: 10px;
+	margin-left: 4px;
+}
+
+.friend_box span{
+	color: #009E9F;
+	line-height: 15px;
+	font-size: 12px;
+	margin-bottom: 4px;
+}
+
+.header_overlay {
+	display:none;
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	opacity:0;
+	z-index:3000;
+}
+
+/*---------------9/4 ▽変更---------------*/
+.header_searchbox {
+	margin-top:7px;
+	margin-right: 10px;
+	float: right;
+	z-index:10001;
+}
+/*---------------9/4 △変更---------------*/
+
+
+.header_searchbox input {
+	width:150px;
+	height:30px;
+	border: solid 1px #dcdcdc;
+	border-radius: 3px;
+	font-size: 14px;
+
+}
+
+#header-suggest{
+	border: solid 1px #dcdcdc;
+	background-color: #F1FFF8;
+	border-bottom: none;
+}
+
+#header-suggest div{
+	border-bottom: solid 1px #dcdcdc;
+	color: #444;
+	padding-left: 10px;
+}
+
+/*----- △ヘッダー -----*/
+
+/*----- ▽コンテンツ -----*/
+#content {
+	margin: 0 auto;
+	margin-top:145px;
+	min-width: 768px;
+	width: 80%;
+	height:100%;
+	background-image: url(../img/bg2.png);
+	background-repeat: repeat-y;
+	background-position: top center;
+}
+
+#form-zone{
+	margin-top: 100px;
+}
+
+/*----- △コンテンツ -----*/
+
+/*----- ▽モーダルウィンドウ -----*/
+#overlay {position: fixed; z-index:100; margin-top:45px; top: 0px;left: 0px;height: 100%;width: 100%;background: #000; opacity:0.7;cursor: pointer;}
+#modal {
+	background: none repeat scroll 0 0 #FFFFFF;
+	padding: 30px;
+	width: 700px;
+	height:400px;
+	box-sizing: border-box;
+	overflow: scroll;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	position: fixed;
+	opacity: 1;
+	z-index: 11000;
+	left: 50%;
+	margin-left: -350px;
+	top: 50%;
+	margin-top: -200px;
+}
+
+.modal_close {
+	position: fixed;
+	top: 50%;
+	right: 50%;
+	margin-top: -220px;
+	margin-right: -365px;
+	display: block;
+	width: 62px;
+	height: 61px;
+	z-index: 23000;
+	cursor: pointer;
+}
+
+.top_logo {
+	/*
+	position:absolute;
+	top:120px;
+	left:170px;
+	*/
+	display: block;
+	width: 494px;
+	height: 93px;
+	margin: 0 auto;
+	margin-top: 60px;
+}
+.top_searchbox {
+	/*
+	position:absolute;
+	top:300px;
+	left:130px;
+	*/
+	margin: 0 auto;
+	margin-top: 50px;
+	background:url(../img/searchbox.png) no-repeat;width:567px;height:62px;}
+.top_searchbox input {
+	margin-top:11px;
+	margin-left:55px;padding-left:5px;width:495px;height:40px;font-size:25px;
+	line-height: 40px;
+	border: none;
+}
+
+#suggest{
+	border: solid 1px #dcdcdc;
+	background-color: #F1FFF8;
+	border-bottom: none;
+}
+
+#suggest div{
+	border-bottom: solid 1px #dcdcdc;
+	color: #444;
+	padding-left: 60px;
+}
+/*----- △モーダルウィンドウ -----*/
+
+
+
+/*-----postのデザイン-----*/
+
+#segment1, #segment2, #segment3, #segment4{
+	margin-top: 100px;
+	min-width: 768px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	min-height: 300px;
+	position: relative;
+}
+
+.birthday{
+	display: block !important;
+	width: 400px;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 20px;
+	padding-top: 0px;
+}
+
+.birthday span{
+	display: inline;
+	padding: 4px 14px 4px 14px;
+	background-color: #009E9F;
+	border-radius: 5px;
+	font-size: 20px;
+	color: #fff;
+	margin: 0 auto;
+}
+
+/*
+.segment-name{
+	width: 150px;
+	text-align: center;
+	line-height: 30px;
+	height: 30px;
+	background-color: #009E9F;
+	border-radius: 5px;
+	font-size: 20px;
+	color: #fff;
+	display: block;
+	margin: 0 auto;
+	font-weight: bold;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+*/
+
+.dammy{
+	position: relative;
+	width: 700px;
+	height: 30px;
+	margin: 0 auto;
+	margin-top: 70px;
+	margin-bottom: 70px;
+}
+
+.segment-year{
+	position: absolute;
+	left: 260px;
+	top: 1px;
+	line-height: 16px;
+	height: 30px;
+	font-size: 16px;
+	color: #666;
+}
+
+.segment-center{
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-left: auto;
+	margin-right:auto;
+	background: #009E9F;
+	border-radius: 8px;
+	margin-top: 8px;
+}
+
+.segment-name{
+	position: absolute;
+	top: 1px;
+	left: 380px;
+	line-height: 16px;
+	height: 30px;
+	font-size: 16px;
+	color: #666;
+}
+
+.box-wrap{
+	position: relative;
+}
+
+
+.post-box{
+	min-width: 370px;
+	width: 45%;
+	min-height:60px; /*これつけないと吹き出しじゃなくなる*/
+	border:1px solid #009E9F;
+	border-radius: 3px;
+	background-color: #ffffff;
+	box-sizing: border-box;
+	margin-bottom: 15px;
+	margin-top: -50px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	position:relative;
+}
+
+.post-box:before{
+	content:"";
+	position:absolute;
+	bottom:-20px; /* value = - border-top-width - border-bottom-width */
+	left:40px; /* controls horizontal position */
+	border-width:20px 20px 0;
+	border-style:solid;
+	border-color:#009E9F transparent;
+	display:block;
+	width:0;
+}
+
+.post-box:after{
+	content:"";
+	position:absolute;
+	bottom:-13px; /* value = - border-top-width - border-bottom-width */
+	left:47px; /* value = (:before left) + (:before border-left) - (:after border-left) */
+	border-width:13px 13px 0;
+	border-style:solid;
+	border-color:#fff transparent;
+	/* reduce the damage in FF3.0 */
+	display:block;
+	width:0;
+}
+
+.left{
+	margin-right: auto;
+}
+
+.right{
+	margin-left: auto;
+}
+
+.left:before{
+	top:19px; /* controls vertical position */
+	bottom:auto;
+	left:auto;
+	right:-12px; /* value = - border-left-width - border-right-width */
+	border-width:7px 0 7px 12px;
+	border-color:transparent #009E9F;
+}
+
+.left:after{
+	top:16px; /* value = (:before top) + (:before border-top) - (:after border-top) */
+	bottom:auto;
+	left:auto;
+	right:-11px; /* value = - border-left-width - border-right-width */
+	border-width:10px 0 10px 21px;
+	border-color:transparent #fff;
+}
+
+.right:before{
+	top:19px; /* controls vertical position */
+	bottom:auto;
+	right:auto;
+	left:-12px; /* value = - border-left-width - border-right-width */
+	border-width:7px 12px 7px 0px;
+	border-color:transparent #009E9F;
+}
+
+.right:after{
+	top:16px; /* value = (:before top) + (:before border-top) - (:after border-top) */
+	bottom:auto;
+	right:auto;
+	left:-11px; /* value = - border-left-width - border-right-width */
+	border-width:10px 21px 10px 0px;
+	border-color:transparent #fff;
+}
+
+.inner{
+	overflow: hidden;
+	box-sizing: border-box;
+	padding: 15px;
+}
+
+.post-header{
+	overflow: hidden;
+}
+
+.prof{
+	width: 33px;
+	height: 33px;
+	float: left;
+	margin-right: 15px;
+}
+
+.name{
+	font-size: 14px;
+	color: #009E9F;
+	font-weight: bold;
+	display: block;
+}
+
+.date{
+	font-size: 11px;
+	color: #b2b2b2;
+	display: block;
+}
+
+.inner p{
+	display: block;
+}
+
+.box-body{
+	font-size: 14px;
+	color: #444;
+	margin-top: 15px;
+}
+
+.box-body img{
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	max-width: 150px;
+}
+
+
+#debug-kit-toolbar{
+	position: absolute;
+	z-index: 999999 !important;
+}
+
+
+/*-----投稿フォームのデザイン-----*/
+
+#form-zone{
+	background: none repeat scroll 0 0 rgba(255,255,255,1);
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+	display: none;
+	position: fixed;
+	top: 30px;
+	left: 50%;
+	margin-left: -275px;
+	width: 450px;
+	border-radius: 3px;
+	background-color: #ffffff;
+	padding-bottom: 10px;
+	min-height: 350px;
+	z-index: 9999;
+	padding: 20px;
+}
+
+#form-zone p{
+	width: 400px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+#form-zone textarea#FbPostBody{
+	display: block;
+	width: 400px;
+	min-height: 200px;
+	resize: vertical;
+	border-radius: 3px;
+	margin: 0 auto;
+	border: solid 1px #dcdcdc;
+	box-sizing: border-box;
+	font-size: 14px;
+	padding: 10px;
+}
+
+#sumbnail{
+	background-color: #ffffff;
+	width: 400px;
+	margin: 0 auto;
+}
+
+#sumbnail img{
+	width: 100px;
+	margin: 5px;
+	box-sizing: border-box;
+	border: solid 1px #c2c2c2;
+}
+
+#description{
+	width: 400px;
+	margin: 0 auto;
+	margin-top: 20px;
+	color: #444;
+	display: block;
+}
+
+#form-zone .select-segment{
+	width: 400px;
+	height: 20px;
+	display: block;
+	margin: 0 auto;
+	margin-top: 5px;
+	font-size: 12px;
+}
+
+#photo-zone{
+	display: inline-block;
+	width: 55px;
+	position: relative;
+	background-image: url(../img/camera.png);
+	background-size: 55px 55px;
+	background-repeat: no-repeat;
+	height: 55px;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+#FbPostPhotoPass{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 55px;
+	height: 55px;
+	opacity: 0;
+	cursor: pointer;
+}
+
+#post-btn{
+	display: inline-block;
+	width: 55px;
+	height: 26px;
+	position: relative;
+	background-image: url(../img/button_post.png);
+	background-repeat: no-repeat;
+	margin-left: 20px;
+	margin-top: 30px;
+	float: right;
+	margin-right: 25px;
+}
+
+#post-btn .post-btn{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 55px;
+	height: 26px;
+	opacity: 0;
+	cursor: pointer;
+}
+
+
+
+#layer{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.7;
+	z-index: 10;
+	display: none;
+}
+
+
+/*-----segment-formのデザイン-----*/
+
+#segment-form{
+	margin: 0 auto;
+	margin-top: 50px;
+	width: 550px;
+	box-sizing: border-box;
+	padding: 25px;
+	padding-right:15px;
+	border: solid 1px #c2c2c2;
+	border-radius: 3px;
+	background:url(../img/segument_back.png);
+	overflow: hidden;
+}
+
+#segment-form input{
+	display: block;
+	width: 360px;
+	height: 30px;
+	border: solid 1px #c2c2c2;
+	border-radius: 3px;
+	padding-left: 10px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+#segment-form select{
+	display: block;
+	float: left;
+	width: 70px;
+	margin: 27px auto 0px auto !important;
+}
+
+.segment-btn{
+	text-align: center;
+	width:120px !important;
+	margin-left: auto;
+	margin-right: auto;
+	height:30px !important;
+	line-height: 20px !important;
+	font-size:13px;
+	font-weight:normal;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #277ae6;
+	padding:4px 15px;
+	background-color:#009E9F;
+	color:#ffffff;
+	display:block !important;
+	cursor: pointer;
+}
+
+
+
+
