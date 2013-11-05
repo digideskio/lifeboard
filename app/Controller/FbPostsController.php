@@ -24,7 +24,7 @@ class FbPostsController extends AppController{
 				    'access_token' => $access_token,
 				    'message' => "@" . $this->request->data["FbPost"]["friend_name"] . "さんのことについて「LifeBoard」に書き込みました。",
 				    'name' => $this->request->data["FbPost"]["user_name"],
-				    'link' => "http://akiho-develop.under.jp/history/facebook/index",
+				    'link' => "http://lifeboard.jp/facebook/index",
 				    'description' => "Lifeboardは、友だちの人生を記録するWebサービスです。ボードに当時の印象や思い出を書いたり、今の人柄を書き込んだりして、友だちを皆に紹介しましょう。",
 				    'picture'=> "http://akiho-develop.under.jp/description.png"
 				);

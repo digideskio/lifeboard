@@ -147,7 +147,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 						var friendID = friendList[i][1];
 						var friendBirthday = friendList[i][2];
 
-						window.location = 'http://akiho-develop.under.jp/history/facebook/friendPage/?friendID=' + friendID + '&friendName=' + $(this).val() + '&friendBirthday=' + friendBirthday;
+						window.location = 'http://lifeboard.jp/facebook/friendPage/?friendID=' + friendID + '&friendName=' + $(this).val() + '&friendBirthday=' + friendBirthday;
 
 						/*
 						window.location = 'http://www16078ui.sakura.ne.jp/history/facebook/friendPage/?friendID=' + friendID + '&friendName=' + $(this).val() + '&friendBirthday=' + friendBirthday;
@@ -166,7 +166,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 						console.log(friendList[key]);
 						var friendID = friendList[key];
 
-						window.location = 'http://akiho-develop.under.jp/history/facebook/friendPage/?friendID=' + friendID + '&friendName=' + $(this).val();
+						window.location = 'http://lifeboard.jp/facebook/friendPage/?friendID=' + friendID + '&friendName=' + $(this).val();
 
 
 						window.location = 'http://www16078ui.sakura.ne.jp/history/facebook/friendPage/?friendID=' + friendID + '&friendName=' + $(this).val();
