@@ -102,8 +102,7 @@ class FacebookController extends AppController{
     }
 
     public function logout(){
-        $facebook = $this->createFacebook();
-        $facebook->destroySession();
+        $this->facebook->destroySession();
         $this->redirect(array("action" => "index"));
     }
 }
