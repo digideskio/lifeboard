@@ -11,7 +11,7 @@ class FacebookController extends AppController{
         $user = $this->facebook->getUser();
     	// Facebookへ接続
     	if($user) {
-    		$this->redirect(array('action' => 'myPage'))
+    		$this->redirect(array('action' => 'myPage'));
     	} else {
             $this->authFacebook();
     	}
