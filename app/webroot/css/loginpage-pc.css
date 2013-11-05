@@ -374,6 +374,9 @@ header#welcome {
 	margin-right: auto;
 	white-space: nowrap;
 }
+.welcome_creators_wrapper img {
+	margin-left: 20px;
+}
 
 /*----- △ Welcomeページ -----*/
 /*---------------9/4 △変更---------------*/
