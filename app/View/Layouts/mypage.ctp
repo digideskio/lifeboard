@@ -69,7 +69,9 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		        		<li id="user_list2">
 		        			<?php echo $this->Html->link("アカウント設定", array("controller" => "segments", "action" => "index")); ?>
 		        		</li>
-		        		<li id="user_list3"><a href="#">ログアウト</a></li>
+		        		<li id="user_list3">
+		        			<?php echo $this->Html->link("ログアウト", array("controller" => "facebook", "action" => "logout")); ?>
+		        		</li>
 		        	</ul>
 		        	<?php echo $this->Html->image("triangle.png", array("id" => "triangle")); ?>
 		        </div>
