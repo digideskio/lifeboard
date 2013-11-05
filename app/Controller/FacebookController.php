@@ -5,17 +5,26 @@ class FacebookController extends AppController{
 
     public function index(){
         $this->layout = "loginpage";
+    }
 
-        if($this->request->is('post')){
-            $this->redirect(array('action'=>'myPage'));
-        }
+    public function login() {
+        $user = $this->facebook->getUser();
+    	// Facebookへ接続
+    	if($user) {
+    		$this->redirect(array('action' => 'myPage'))
+    	} else {
+            $this->authFacebook();
+    	}
     }
 
     public function myPage(){
         $this->layout = "mypage";
-        // Facebookへ接続
-        $this->connectFb();
-        $fb = $this->facebook->getUser();
+
+        $user = $this->facebook->getUser();
+
+        if(!$user) {
+        	$this->redirect(array('action' => 'index'));
+        }
 
         try{
             $me = $this->facebook->api('/me');
@@ -25,7 +34,7 @@ class FacebookController extends AppController{
             error_log($e);
         }
 
-        $this->set(compact('fb'));
+        $this->set(compact('user'));
         $this->set(compact('me'));
         $this->set(compact('friends_data'));
 
